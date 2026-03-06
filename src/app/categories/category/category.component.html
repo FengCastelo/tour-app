@@ -1,18 +1,19 @@
 <div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
   <h2 class="text-2x1 font-semibold text-gray-700 mb-2">New Category</h2>
   <hr class="mb-5"/>
-  <form id="formCategory">
+  <form id="formCategory" [formGroup]="formField" (ngSubmit)="save()">
     <div class="mb-4">
       <label class="block text-gray-600 font-medium mb-2">Category Name </label>
       <input
         type="text"
         name="name"
+        formControlName="name"
         id="name"
-        placeholder="ex: Restaurant, Hotels, Beaches, Malls"
+        placeholder="ex: Restaurants, Hotels, Beaches, Malls"
         class="w-full p-3 rounded border border-gray-300 shadow-sm focus:ring focus:ring-purple-400"
         required
       />
-      <span class="text-red-600 text-sm">Required*</span>
+      <span class="text-red-600 text-sm" *ngIf="isFieldInvalid('name')">Required*</span>
     </div>
 
     <div class="mb-4">
@@ -21,12 +22,13 @@
         name="description"
         rows="3"
         id="description"
+        formControlName="description"
         placeholder="Place Description"
         class="w-full p-3 rounded border border-gray-300 shadow-sm focus:outline-none focus:ring-purple-400"
         required
       >
       </textarea>
-      <span class="text-red-600 text-sm">Required*</span>
+      <span class="text-red-600 text-sm" *ngIf="isFieldInvalid('description')">Required*</span>
     </div>
 
     <button
