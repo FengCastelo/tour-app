@@ -10,14 +10,17 @@ const routes: Routes = [
     children: [
       {
         path: 'category',
-        loadChildren: () => import('../categories/categories.module').then(m => m.CategoriesModule) 
-      }
-    ]
-  }
+        loadChildren: () =>
+          import('../categories/categories.module').then(
+            (m) => m.CategoriesModule,
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TemplateRoutingModule { }
+export class TemplateRoutingModule {}

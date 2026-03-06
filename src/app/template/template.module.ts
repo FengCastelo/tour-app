@@ -5,15 +5,8 @@ import { TemplateRoutingModule } from './template-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { CategoriesModule } from '../categories/categories.module';
 
-
 @NgModule({
-  declarations: [
-    LayoutComponent
-  ],
-  imports: [
-    CommonModule,
-    TemplateRoutingModule,
-    CategoriesModule  
-  ]
+  declarations: [LayoutComponent],
+  imports: [CommonModule, TemplateRoutingModule, CategoriesModule],
 })
-export class TemplateModule { }
+export class TemplateModule {}
