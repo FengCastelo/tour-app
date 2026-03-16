@@ -1,14 +1,19 @@
 {
   "categories": [
     {
-      "name": "Shoppings",
-      "description": "Lugar para fazer compras e lazer",
-      "id": "6e63"
-    },
-    {
       "id": "e6b7",
       "name": "Beaches",
       "description": "Place to rest and take a bath"
+    },
+    {
+      "id": "794d",
+      "name": "Hotel",
+      "description": "Place to rest and enjoy with your family"
+    },
+    {
+      "id": "665b",
+      "name": "Mall",
+      "description": "A place to shop and enjoy leisure time"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

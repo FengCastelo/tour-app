@@ -16,6 +16,10 @@ export class CategoryService {
   }
 
   findAll(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.baseUrl)
+    return this.http.get<Category[]>(this.baseUrl);
+  }
+  
+  deleteById(id: string): Observable<Category> {
+    return this.http.delete<Category>(this.baseUrl + `${id}`);
   }
 }
