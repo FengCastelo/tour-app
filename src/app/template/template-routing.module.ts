@@ -9,11 +9,20 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'category',
+        path: 'categories',
         loadChildren: () =>
           import('../categories/categories.module').then(
             (m) => m.CategoriesModule,
           ),
+          pathMatch: 'full'
+      },
+      {
+        path: 'places',
+        loadChildren: () =>
+          import('../places/places.module').then(
+            (p) => p.PlacesModule,
+          ),
+          pathMatch: 'full'
       },
     ],
   },
