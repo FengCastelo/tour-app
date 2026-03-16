@@ -19,14 +19,25 @@
     </div>
 
     <div class="mb-4">
-        <label for="category" class="block text-gray-600 font-medium mb-2"
-          >Category
-        </label>
+      <label for="category" class="block text-gray-600 font-medium mb-2"
+        >Category
+      </label>
+      <select
+        name="category"
+        id="category"
+        formControlName="category"
+        class="w-full p-3 border border-gray-400 rounded shadow-sm focus:outline-none focus:ring focus:ring-purple-300"
+      >
+        <option [value]="">Select a Category</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">
+          {{ cat.name }}
+        </option>
+      </select>
     </div>
 
     <div class="mb-4">
-      <label for="location" class="block text-gray-600 font-medium mb-2"
-        > Location
+      <label for="location" class="block text-gray-600 font-medium mb-2">
+        Location
       </label>
       <input
         type="text"
@@ -41,8 +52,8 @@
     </div>
 
     <div class="mb-4">
-      <label for="urlPhoto" class="block text-gray-600 font-medium mb-2"
-        > Place photo URL
+      <label for="urlPhoto" class="block text-gray-600 font-medium mb-2">
+        Place photo URL
       </label>
       <input
         type="text"
@@ -56,19 +67,30 @@
       <span class="text-red-600 text-sm">Required*</span>
     </div>
 
-     <div class="mb-4">
-        <label for="category" class="block text-gray-600 font-medium mb-2"
-          > Rating
-        </label>
+    <div class="mb-4">
+      <label for="rating" class="block text-gray-600 font-medium mb-2">
+        Rating
+      </label>
+      <select
+        name="rating"
+        id="rating"
+        formControlName="rating"
+        class="w-full p-3 border border-gray-400 rounded shadow-sm focus:outline-none focus:ring focus:ring-purple-300"
+      >
+        <option [value]=""></option>
+        <option [value]="1">1 - So Bad</option>
+        <option [value]="2">2 - Bad</option>
+        <option [value]="3">3 - Average</option>
+        <option [value]="4">4 - Very Good</option>
+        <option [value]="5">5 - Excellent</option>
+      </select>
     </div>
 
+    <button
+      type="submit"
+      class="w-full bg-blue-800 text-gray-200 font-bold p-3 rounded shadow hover:bg-purple-700"
+    >
+      Save Place
+    </button>
   </form>
-
-  <button
-    type="submit"
-    class="w-full bg-blue-800 text-gray-200 font-bold p-3 rounded shadow hover:bg-purple-700"
-  >
-    Save
-  </button>
-  
 </div>

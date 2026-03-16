@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Category } from '../../categories/category';
+import { CategoryService } from '../../categories/category.service';
 
 @Component({
   selector: 'app-place',
@@ -8,11 +9,11 @@ import { Category } from '../../categories/category';
   templateUrl: './place.component.html',
   styleUrl: './place.component.scss',
 })
-export class PlaceComponent {
+export class PlaceComponent implements OnInit {
   formField: FormGroup;
   categories: Category[] = [];
 
-  constructor() {
+  constructor(private categoryService: CategoryService) {
     this.formField = new FormGroup({
       name: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
@@ -20,6 +21,13 @@ export class PlaceComponent {
       urlPhoto: new FormControl('', Validators.required),
       rating: new FormControl('', Validators.required)
     });
+  }
+
+  ngOnInit(): void {
+    this.categoryService.findAll().subscribe({
+      next: (categoriesList) => this.categories = categoriesList,
+      error: erro => console.error('Error: ', erro)
+    })
   }
 
   save() {
