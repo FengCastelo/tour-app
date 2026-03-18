@@ -14,15 +14,19 @@ const routes: Routes = [
           import('../categories/categories.module').then(
             (m) => m.CategoriesModule,
           ),
-          pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'places',
         loadChildren: () =>
-          import('../places/places.module').then(
-            (p) => p.PlacesModule,
-          ),
-          pathMatch: 'full'
+          import('../places/places.module').then((p) => p.PlacesModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'gallery',
+        loadChildren: () =>
+          import('../gallery/gallery.module').then((m) => m.GalleryModule),
+        pathMatch: 'full',
       },
     ],
   },
