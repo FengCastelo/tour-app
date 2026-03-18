@@ -4,14 +4,12 @@ import { Place } from './Place';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PlaceService {
-  private baseUrl: string = "http://localhost:3000/places";
+  private baseUrl: string = 'http://localhost:3000/places';
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) {}
 
   save(place: Place): Observable<Place> {
     return this.http.post<Place>(this.baseUrl, place);

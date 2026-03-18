@@ -24,6 +24,22 @@
       "location": "Fortaleza-CE",
       "urlPhoto": "teste",
       "rating": "5"
+    },
+    {
+      "id": "64bb",
+      "name": "Iguatemi Shopping",
+      "category": "665b",
+      "location": "São Paulo",
+      "urlPhoto": "https://pt.wikipedia.org/wiki/Iguatemi_S%C3%A3o_Paulo",
+      "rating": "4"
+    },
+    {
+      "id": "d947",
+      "name": "Praia do Espelho",
+      "category": "e6b7",
+      "location": "Porto Seguro - BA",
+      "urlPhoto": "https://www.melhoresdestinos.com.br/praia-do-espelho-dicas.html",
+      "rating": "5"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
