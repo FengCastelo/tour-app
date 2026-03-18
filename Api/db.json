@@ -7,12 +7,12 @@
     },
     {
       "id": "794d",
-      "name": "Hotel",
+      "name": "Hotels",
       "description": "Place to rest and enjoy with your family"
     },
     {
       "id": "665b",
-      "name": "Mall",
+      "name": "Malls",
       "description": "A place to shop and enjoy leisure time"
     }
   ],
@@ -20,25 +20,25 @@
     {
       "id": "1778",
       "name": "Beira Mar",
-      "category": "e6b7",
+      "category": "Beaches",
       "location": "Fortaleza - CE",
-      "urlPhoto": "teste",
+      "urlPhoto": "https://www.melhoresdestinos.com.br/wp-content/uploads/2023/09/Hotel-beira-mar-fortaleza-capa.jpg",
       "rating": "5"
     },
     {
       "id": "64bb",
       "name": "Iguatemi Shopping",
-      "category": "665b",
+      "category": "Malls",
       "location": "São Paulo - SP",
-      "urlPhoto": "https://pt.wikipedia.org/wiki/Iguatemi_S%C3%A3o_Paulo",
+      "urlPhoto": "https://vejasp.abril.com.br/wp-content/uploads/2016/12/iguatemi020.jpeg?crop=1&resize=1212,909",
       "rating": "4"
     },
     {
       "id": "d947",
       "name": "Praia do Espelho",
-      "category": "e6b7",
+      "category": "Beaches",
       "location": "Porto Seguro - BA",
-      "urlPhoto": "https://www.melhoresdestinos.com.br/praia-do-espelho-dicas.html",
+      "urlPhoto": "https://ateondeeupuderir.com/wp-content/uploads/elementor/thumbs/praia-do-espelho-capa-r944cnwt9dw8j38rx0rp2k57nf7xhp6bi68usupe9c.jpg",
       "rating": "5"
     }
   ]

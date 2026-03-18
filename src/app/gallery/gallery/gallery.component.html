@@ -1,1 +1,31 @@
-<div class="p-4 text-center font-semibold"> Hello Gallery! </div>
+<!-- Filters / Filtros -->
+<div class="p-4 bg-white shadow text-center font-semibold">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <input type="text" placeholder="Search for the place name"
+            class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600"
+        />
+
+        <select class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600">
+            <option [value]="">All Categories</option>
+            <option *ngFor="let cat of categoriesFilter" [value]="cat.name" >{{ cat.name }}</option>
+        </select>
+    </div>
+</div>
+
+<!-- List of places / Lista dos Lugares -->
+<div id="placesList" class="p-4 grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white shadow rounded overflow-hidden font-bold text-gray-800" *ngFor="let plc of places">
+        <img [src]="plc.urlPhoto" [alt]="plc.name" class="w-full h-40 object-cover">
+        <div class="p-4">
+            <h2 class="text-lg font-semibold">
+                {{plc.name}}
+            </h2>
+            <p class="mt-2 text-gray-500"> Categoria: <span class="text-blue-600">{{ plc.category }}</span> </p>
+            <p class="mt-2 text-gray-500"> Location: <span class="text-blue-600">{{ plc.location }}</span> </p>
+            <div class="mt-2 flex items-center">
+                <span class="text-yellow-600"></span>
+                <span class="ml-2 text-gray-600"> {{plc.rating}}</span>
+            </div>
+        </div>
+    </div>
+</div>
