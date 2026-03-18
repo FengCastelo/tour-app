@@ -16,5 +16,15 @@
       "description": "A place to shop and enjoy leisure time"
     }
   ],
+  "places": [
+    {
+      "id": "1778",
+      "name": "Beira Mar",
+      "category": "e6b7",
+      "location": "Fortaleza-CE",
+      "urlPhoto": "teste",
+      "rating": "5"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Category } from '../../categories/category';
 import { CategoryService } from '../../categories/category.service';
+import { PlaceService } from '../place.service';
 
 @Component({
   selector: 'app-place',
@@ -13,7 +14,10 @@ export class PlaceComponent implements OnInit {
   formField: FormGroup;
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService) {
+  constructor(
+    private categoryService: CategoryService,
+    private service: PlaceService
+  ) {
     this.formField = new FormGroup({
       name: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
@@ -31,6 +35,13 @@ export class PlaceComponent implements OnInit {
   }
 
   save() {
-    console.log('Values: ', this.formField.value);
+    this.service.save(this.formField.value)
+      .subscribe({
+        next: (place) => {
+          console.log("Registered Successfuly", place);
+          this.formField.reset()
+        },
+        error: (erro) => console.error('Occurred an Error ', erro)
+    })
   }
 }

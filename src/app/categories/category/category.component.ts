@@ -30,7 +30,7 @@ export class CategoryComponent {
           console.log('Saved successful!', category);
           this.formField.reset();
         },
-        error: (erro) => console.error('Ocurred an Error ', erro),
+        error: (erro) => console.error('Occurred an Error ', erro),
       });
     }
   }
