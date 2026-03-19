@@ -29,4 +29,8 @@ export class GalleryComponent implements OnInit {
       .findAll()
       .subscribe((placesResponse) => (this.places = placesResponse));
   }
+
+  getTotalStars(place: Place) {
+    return '&#9733;'.repeat(place.rating || 0) + '&#10032;'.repeat(5 - (place.rating || 0) );
+  }
 }

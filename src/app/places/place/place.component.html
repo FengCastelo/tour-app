@@ -31,7 +31,7 @@
         class="w-full p-3 border border-gray-400 rounded shadow-sm focus:outline-none focus:ring focus:ring-purple-300"
       >
         <option [value]="">Select a Category</option>
-        <option *ngFor="let cat of categories" [value]="cat.id">
+        <option *ngFor="let cat of categories" [value]="cat.name">
           {{ cat.name }}
         </option>
       </select>

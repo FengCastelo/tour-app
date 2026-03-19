@@ -14,6 +14,11 @@
       "id": "665b",
       "name": "Malls",
       "description": "A place to shop and enjoy leisure time"
+    },
+    {
+      "id": "1790",
+      "name": "Stadiums",
+      "description": "Space to watch soccer, football, baseball, between other matches, along with concerts or festivals"
     }
   ],
   "places": [
@@ -40,6 +45,15 @@
       "location": "Porto Seguro - BA",
       "urlPhoto": "https://ateondeeupuderir.com/wp-content/uploads/elementor/thumbs/praia-do-espelho-capa-r944cnwt9dw8j38rx0rp2k57nf7xhp6bi68usupe9c.jpg",
       "rating": "5"
+    },
+    {
+      "id": "cdd4",
+      "name": "Stadium Maracanã",
+      "category": "Stadiums",
+      "location": "Rio de Janeiro",
+      "urlPhoto": "https://dynamic-media.tacdn.com/media/photo-o/2f/ab/11/ee/caption.jpg?w=700&h=500&s=1",
+      "rating": "2"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
