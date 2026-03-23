@@ -14,6 +14,8 @@ import { CategoryService } from '../../categories/category.service';
 export class GalleryComponent implements OnInit {
   places: Place[] = [];
   categoriesFilter: Category[] = [];
+  nameFilter: string = '';
+  categoryFilter: string = '';
 
   constructor(
     private placeService: PlaceService,
@@ -31,6 +33,17 @@ export class GalleryComponent implements OnInit {
   }
 
   getTotalStars(place: Place) {
-    return '&#9733;'.repeat(place.rating || 0) + '&#10032;'.repeat(5 - (place.rating || 0) );
+    return (
+      '&#9733;'.repeat(place.rating || 0) +
+      '&#10032;'.repeat(5 - (place.rating || 0))
+    );
+  }
+
+  filter() {
+    console.log('Values:', this.nameFilter, this.categoryFilter);
+
+    this.placeService
+      .filter(this.nameFilter, this.categoryFilter)
+      .subscribe((result) => (this.places = result));
   }
 }

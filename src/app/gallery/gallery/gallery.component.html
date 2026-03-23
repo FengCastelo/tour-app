@@ -1,22 +1,36 @@
 <!-- Filters / Filtros -->
-<div class="p-4 bg-white shadow text-center font-semibold">
-  <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-    <input
-      type="text"
-      placeholder="Search for the place name"
-      class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600"
-    />
 
-    <select
-      class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600"
-    >
-      <option [value]="">All Categories</option>
-      <option *ngFor="let cat of categoriesFilter" [value]="cat.name">
-        {{ cat.name }}
-      </option>
-    </select>
+<form #frm="ngForm">
+  <div class="p-4 bg-white shadow text-center font-semibold">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <input
+        type="text"
+        name="nameFilter"
+        [(ngModel)]="nameFilter"
+        placeholder="Search for the place name"
+        class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600"
+      />
+
+      <select
+        name="categoriesFilter"
+        [(ngModel)]="categoryFilter"
+        class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600"
+      >
+        <option [value]="">All Categories</option>
+        <option *ngFor="let cat of categoriesFilter" [value]="cat.name">
+          {{ cat.name }}
+        </option>
+      </select>
+
+      <button
+        (click)="filter()"
+        class="bg-blue-600 text-white font-semibold border border-purple-300 rounded hover:bg-blue-800 px-4 py-2"
+      >
+        Pesquisar
+      </button>
+    </div>
   </div>
-</div>
+</form>
 
 <!-- List of places / Lista dos Lugares -->
 <div
