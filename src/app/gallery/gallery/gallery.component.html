@@ -16,7 +16,7 @@
         [(ngModel)]="categoryFilter"
         class="w-full border border-purple-300 p-2 rounded shadow-md focus:ring focus:ring-gray-600"
       >
-        <option [value]="">All Categories</option>
+        <option [value]="-1">All Categories</option>
         <option *ngFor="let cat of categoriesFilter" [value]="cat.name">
           {{ cat.name }}
         </option>

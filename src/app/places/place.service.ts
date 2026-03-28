@@ -27,7 +27,7 @@ export class PlaceService {
       parameters = parameters.set('name_like', name);
     }
 
-    if(category) {
+    if(category && category !== '-1') {
       parameters = parameters.set('category', category);
     }
 
