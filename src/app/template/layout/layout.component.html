@@ -2,8 +2,8 @@
   class="bg-gradient-to-r from-purple-700 to-gray-800 text-gray-200 p-6 shadow-lg"
 >
   <div class="text-center">
-    <h1 class="text-lg text-3x1 font-bold">Title</h1>
-    <p class="text-lg mt-2">Subtitle</p>
+    <h1 class="text-lg text-3x1 font-bold">{{props.title}}</h1>
+    <p class="text-sm mt-2">{{props.subTitle}}</p>
 
     <div class="mt-4">
       <hr class="border-t border-blue-300 opacity-50" />
@@ -15,7 +15,9 @@
           <a routerLink="/pages/gallery" class="hover:text-blue-400">Galery</a>
         </li>
         <li>
-          <a routerLink="/pages/categories" class="hover:text-blue-400">Categories</a>
+          <a routerLink="/pages/categories" class="hover:text-blue-400"
+            >Categories</a
+          >
         </li>
         <li>
           <a routerLink="/pages/places" class="hover:text-blue-400">Places</a>
